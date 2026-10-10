@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QuickGradeCalc | a free grade calculator I built for teachers</title>
+<meta name="description" content="Notes on building QuickGradeCalc, a free web app that turns test scores into percentages and letter grades.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230f5c57'/><path d='M8 16.5l5.5 5.5L24 11' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf7ee;--sand:#f0e8d8;--teal:#0f5c57;--deep:#0b4543;--orange:#e2572b;--ink:#17302e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Poppins,system-ui,sans-serif;line-height:1.65}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+header,main,footer{max-width:760px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;padding-top:22px;padding-bottom:22px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;text-decoration:none;color:var(--ink)}
+.brand b{color:var(--orange)}
+.mark{width:34px;height:34px}
+.btn{display:inline-block;background:var(--teal);color:#fff;text-decoration:none;font-weight:600;padding:11px 20px;border-radius:9px}
+.btn:hover{background:var(--deep)}
+.hero{padding:40px 0 48px}
+h1{font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:1.1;margin:0 0 18px;letter-spacing:-.02em}
+h1 span{color:var(--orange);display:block}
+.lede{font-size:1.05rem;max-width:52ch;margin:0 0 24px}
+h2{font-weight:800;font-size:1.5rem;margin:0 0 14px}
+section{padding:0 0 44px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px}
+.cols h3{margin:0 0 6px;font-size:1.05rem;border-left:4px solid var(--orange);padding-left:10px}
+.cols p{margin:0}
+footer{border-top:1px solid var(--sand);padding-top:20px;padding-bottom:36px;font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="https://www.quickgradecalc.online">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f5c57"/><path d="M8 16.5l5.5 5.5L24 11" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Quick<b>Grade</b>
+  </a>
+  <a class="btn" href="https://www.quickgradecalc.online">Start grading</a>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Grading a stack of tests <span>shouldn't take all evening.</span></h1>
+    <p class="lede">I built QuickGradeCalc so teachers can set the question count once, tap +1 wrong for each miss, and read off the percentage and letter grade. It's free and needs no sign-up.</p>
+    <a class="btn" href="https://www.quickgradecalc.online">Try the free grade calculator</a>
+  </div>
+
+  <section>
+    <h2>What it does</h2>
+    <div class="cols">
+      <div><h3>Fast grading</h3><p>Tap +1 wrong or press W for each miss and grade a whole stack in seconds.</p></div>
+      <div><h3>Your grade scale</h3><p>Set your own minimum percentages for A, B, C, and D.</p></div>
+      <div><h3>Printable quick chart</h3><p>See the grade for every possible score and print it for your desk.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it's built</h2>
+    <p>Next.js and Tailwind CSS, hosted on Vercel. It runs in any browser on phones, tablets, and desktops. Read <a href="https://www.quickgradecalc.online/grade-calculator-guide">the grade calculator guide</a> or use the <a href="https://www.quickgradecalc.online/percentage-to-letter-grade-calculator">percentage to letter grade calculator</a>.</p>
+  </section>
+</main>
+
+<footer>
+  <a href="https://www.quickgradecalc.online">QuickGradeCalc.online</a> · <a href="https://github.com/quickgradecalc/quickgradecalc">Source on GitHub</a>
+</footer>
+</body>
+</html>
